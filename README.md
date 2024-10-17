@@ -15,14 +15,15 @@ docker compose exec postfix tail -f /var/log/mail.log
 ```
 
 
-### Postfix will not accept this - user (sender) not authenticated
+## Postfix will not accept this - user (sender) not authenticated
 ```bash
 ./smtptest.py -v ibuetler@ost.ch ivan.buetler@gmail.com localhost
 ```
 
 
-### Postfix will accept this - but GMAIL is not accepting it (mail does not look trustworthy for GMAIL)
+## Postfix will accept this - but GMAIL is not accepting it (mail does not look trustworthy for GMAIL)
 Port 25
+
 ```bash
 ./smtptest.py -v -u ivan.buetler -p EBp5CJNcykf7cgmb ibuetler@ost.ch ivan.buetler@gmail.com localhost
 ```
@@ -32,3 +33,4 @@ Port 587 (Submission)
 * ./smtptest.py -v -n 587 -t -u ivan.buetler -p EBp5CJNcykf7cgmb ibuetler@ost.ch ivan.buetler@gmail.com localhost
 ```
 
+# END
