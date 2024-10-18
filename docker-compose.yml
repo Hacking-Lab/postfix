@@ -4,6 +4,7 @@ services:
   postfix:
     image: hackinglab/postfix-hl:latest
     hostname: postfix.localhost
+    build: .
     restart: always
     environment:
       TZ: Europe/Zurich
